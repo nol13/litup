@@ -1,0 +1,31 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: LitUpAccess
+    network: base
+    source:
+      address: "0x0000000000000000000000000000000000000000"
+      abi: LitUpAccess
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: typescript
+      entities:
+        - Post
+        - Purchase
+      abis:
+        - name: LitUpAccess
+          file: ./abis/LitUpAccess.json
+      eventHandlers:
+        - event: PostCreated(indexed uint256,indexed address,uint256,string,string,uint256)
+          handler: handlePostCreated
+        - event: Purchased(indexed uint256,indexed address,uint256,uint256,uint256)
+          handler: handlePurchased
+        - event: PriceUpdated(indexed uint256,uint256)
+          handler: handlePriceUpdated
+        - event: PostHidden(indexed uint256,bool)
+          handler: handlePostHidden
+      file: ./src/mapping.ts

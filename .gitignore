@@ -1,0 +1,12 @@
+contracts/lib/
+contracts/out/
+contracts/broadcast/
+contracts/cache/
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store
+coverage/
+.docusaurus
+.yarn/

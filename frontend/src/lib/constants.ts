@@ -1,0 +1,1 @@
+export const LITUP_CONTRACT_ADDRESS = "0x0000000000000000000000000000000000000000"; // TODO: Deploy contract and update this
