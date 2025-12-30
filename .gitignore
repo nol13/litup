@@ -1,7 +1,10 @@
+# Contracts
 contracts/lib/
 contracts/out/
 contracts/broadcast/
 contracts/cache/
+
+# Frontend
 node_modules/
 dist/
 .env
@@ -10,3 +13,9 @@ dist/
 coverage/
 .docusaurus
 .yarn/
+
+# Subgraph
+subgraph/node_modules/
+# Allow build and generated
+!subgraph/build/
+!subgraph/generated/
