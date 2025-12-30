@@ -16,6 +16,5 @@ coverage/
 
 # Subgraph
 subgraph/node_modules/
-# Allow build and generated
-!subgraph/build/
+subgraph/build/
 !subgraph/generated/
